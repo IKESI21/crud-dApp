@@ -1,94 +1,83 @@
-# crud-app
+# 🚀 Solana CRUD App
 
-## Getting Started
+A full-stack decentralized application built with Solana, Anchor, and TypeScript that demonstrates basic CRUD operations on the blockchain.
 
-### Prerequisites
+## ✨ Features
 
-- Node v18.18.0 or higher
+- 🔗 Solana blockchain integration
+- ⚓ Anchor framework for smart contract development
+- ⚛️ Modern TypeScript frontend
+- 🎯 Simple and intuitive CRUD operations
+- 🔒 Secure wallet integration
 
-- Rust v1.77.2 or higher
-- Anchor CLI 0.30.1 or higher
-- Solana CLI 1.18.17 or higher
+## 🛠️ Prerequisites
 
-### Installation
+- Node.js v18.18.0+
+- Rust v1.77.2+
+- Anchor CLI v0.30.1+
+- Solana CLI v1.18.17+
 
-#### Clone the repo
+## 🚀 Quick Start
 
-```shell
+1. **Clone and Install**
+```bash
 git clone <repo-url>
 cd <repo-name>
-```
-
-#### Install Dependencies
-
-```shell
 pnpm install
 ```
 
-#### Start the web app
-
-```
+2. **Start Development**
+```bash
 pnpm dev
 ```
 
-## Apps
+## 📦 Project Structure
 
-### anchor
+### 🦀 Anchor Program (`/anchor`)
+The Solana smart contract written in Rust using the Anchor framework.
 
-This is a Solana program written in Rust using the Anchor framework.
-
-#### Commands
-
-You can use any normal anchor commands. Either move to the `anchor` directory and run the `anchor` command or prefix the command with `pnpm`, eg: `pnpm anchor`.
-
-#### Sync the program id:
-
-Running this command will create a new keypair in the `anchor/target/deploy` directory and save the address to the Anchor config file and update the `declare_id!` macro in the `./src/lib.rs` file of the program.
-
-You will manually need to update the constant in `anchor/lib/counter-exports.ts` to match the new program id.
-
-```shell
+#### Key Commands
+```bash
+# Generate new program ID
 pnpm anchor keys sync
-```
 
-#### Build the program:
-
-```shell
+# Build the program
 pnpm anchor-build
-```
 
-#### Start the test validator with the program deployed:
-
-```shell
+# Start local validator
 pnpm anchor-localnet
-```
 
-#### Run the tests
-
-```shell
+# Run tests
 pnpm anchor-test
-```
 
-#### Deploy to Devnet
-
-```shell
+# Deploy to devnet
 pnpm anchor deploy --provider.cluster devnet
 ```
 
-### web
+> 📝 After running `anchor keys sync`, remember to update the program ID in `anchor/lib/counter-exports.ts`
 
-This is a React app that uses the Anchor generated client to interact with the Solana program.
+### 🌐 Web App (`/web`)
+React-based frontend application for interacting with the Solana program.
 
-#### Commands
-
-Start the web app
-
-```shell
+#### Key Commands
+```bash
+# Start development server
 pnpm dev
-```
 
-Build the web app
-
-```shell
+# Build for production
 pnpm build
 ```
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to submit a Pull Request.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- Solana Foundation
+- Anchor Framework
+- React Community

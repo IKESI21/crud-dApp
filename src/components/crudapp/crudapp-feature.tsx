@@ -1,6 +1,6 @@
 'use client'
 
-import { useWallet } from '@solana/wallet-adapter-react'
+import { useAnchorWallet } from '@solana/wallet-adapter-react'
 import { WalletButton } from '../solana/solana-provider'
 import { AppHero, ellipsify } from '../ui/ui-layout'
 import { ExplorerLink } from '../cluster/cluster-ui'
@@ -8,10 +8,10 @@ import { useCrudappProgram } from './crudapp-data-access'
 import { CrudappCreate, CrudappList } from './crudapp-ui'
 
 export default function CrudappFeature() {
-  const { publicKey } = useWallet()
+  const wallet = useAnchorWallet();
   const { programId } = useCrudappProgram()
 
-  return publicKey ? (
+  return wallet?.publicKey ? (
     <div>
       <AppHero
         title="Crudapp"
